@@ -77,7 +77,7 @@ public class PictureCollage {
 		chooser.setDialogTitle("Pick the image you want to convert."); // title of JFileChooser window
 		int returnVal = chooser.showOpenDialog(chooser);
 		
-		String defaultImagePath = "/Users/Keith/Pictures/raven.png"; 
+		String defaultImagePath = "/Users/Keith/Pictures/Game of Thrones/raven.png"; 
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION) { // if acceptable file is chosen shows user what file they picked in JOptionPane window
 			JOptionPane.showMessageDialog(null,"You opened this file: " + chooser.getSelectedFile().getPath());
@@ -97,7 +97,7 @@ public class PictureCollage {
 		JOptionPane.showMessageDialog(null, "Pick the library of sub images. \n(Images must be named in sequential order starting at 1.gif. The one included will work.)");
 
 		int returnVal = chooser.showDialog(chooser, "select");
-		String folderPath = "/Users/Keith/Pictures/Icons/1.gif"; // default path of folder if nothing is selected
+		String folderPath = "Icons/1.gif"; // default path of folder if nothing is selected
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			JOptionPane.showMessageDialog(null, "You opened this library: " + chooser.getSelectedFile().getPath()); // informs user which library was opened
@@ -205,7 +205,7 @@ public class PictureCollage {
 		for (int i = 0; i < intensity.length; i++) {
 			c = 0;
 			for (int j = 0; j < intensity[0].length; j++) {
-				g.drawImage(imageList.get(findIndex(intensitySubImages, intensity[i][j] )),c, r + 1, null);// adds subunits at correct position in the final image
+				g.drawImage(imageList.get(findIndex(intensitySubImages, intensity[i][j])), c, r + 1, null);// adds subunits at correct position in the final image
 				c += imageList.get(0).getWidth(); // increments width along final image so next image is placed next to and not on top of previous image
 				
 			}
